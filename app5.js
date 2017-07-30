@@ -49,7 +49,7 @@ var ViewModel = function(){
  self.filterLoc = ko.computed(function () {
     var search = this.query().toLowerCase();
     return ko.utils.arrayFilter(self.locList(), function (loc) {
-        return loc.name().toLowerCase().indexOf(search) >= 0;
+        return loc.title().toLowerCase().indexOf(search) >= 0;
     });
 });
 
